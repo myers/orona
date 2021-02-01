@@ -20,6 +20,7 @@
 class Progress extends EventEmitter
 
   constructor: (initialAmount) ->
+    super()
     @lengthComputable = yes
     @loaded = 0
     @total = if initialAmount? then initialAmount else 0

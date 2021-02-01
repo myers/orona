@@ -42,7 +42,7 @@ class BoloClientWorld extends ClientWorld
   authority: no
 
   constructor: ->
-    super
+    super()
     @mapChanges = {}
     @processingServerMessages = no
 
@@ -132,7 +132,7 @@ class BoloClientWorld extends ClientWorld
 
   # Send the heartbeat (an empty message) every 10 ticks / 400ms.
   tick: ->
-    super
+    super()
 
     if @increasingRange != @decreasingRange
       if ++@rangeAdjustTimer == 6
@@ -151,7 +151,7 @@ class BoloClientWorld extends ClientWorld
       @ws.close()
       $(@ws).unbind '.bolo'
       @ws = null
-    super
+    super()
 
   # On the client, this is a no-op.
   soundEffect: (sfx, x, y, owner) ->
@@ -341,7 +341,7 @@ class BoloClientWorld extends ClientWorld
 
   # Override that reverts map changes as well.
   netRestore: ->
-    super
+    super()
     for idx, cell of @mapChanges
       cell.setType cell._net_oldType, cell._net_hadMine
       cell.life = cell._net_oldLife

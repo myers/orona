@@ -12,6 +12,7 @@ class WorldPillbox extends BoloObject
 
   # This is a MapObject; it is constructed differently on the server.
   constructor: (world_or_map, x, y, @owner_idx, @armour, @speed) ->
+    super()
     if arguments.length == 1
       @world = world_or_map
     else

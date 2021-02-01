@@ -11,6 +11,7 @@ class WorldBase extends BoloObject
 
   # This is a MapObject; it is constructed differently on the server.
   constructor: (world_or_map, x, y, @owner_idx, @armour, @shells, @mines) ->
+    super()
     if arguments.length == 1
       @world = world_or_map
     else

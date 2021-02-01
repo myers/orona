@@ -28,7 +28,7 @@ class BoloLocalWorld extends NetLocalWorld
     @loop.start()
 
   tick: ->
-    super
+    super()
 
     if @increasingRange != @decreasingRange
       if ++@rangeAdjustTimer == 6

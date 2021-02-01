@@ -80,7 +80,7 @@ class CachedSegment
 class Offscreen2dRenderer extends Common2dRenderer
 
   setup: ->
-    super
+    super()
 
     @cache = new Array(MAP_SIZE_SEGMENTS)
     for y in [0...MAP_SIZE_SEGMENTS]

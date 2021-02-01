@@ -178,7 +178,7 @@ class WebglRenderer extends BaseRenderer
   # On resize, we update the canvas size, and recalculate the translation matrix. Because this is
   # called at convenient times, we also check the GL error state at this point.
   handleResize: ->
-    super
+    super()
 
     @ctx.viewport(0, 0, window.innerWidth, window.innerHeight)
     @setTranslation(0, 0)

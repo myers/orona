@@ -33,7 +33,7 @@ class BoloServerWorld extends ServerWorld
   authority: yes
 
   constructor: (@map) ->
-    super
+    super()
     @boloInit()
     @clients = []
     @map.world = this
@@ -48,7 +48,7 @@ class BoloServerWorld extends ServerWorld
 
   # Update, and then send packets to the client.
   tick: ->
-    super
+    super()
     @sendPackets()
 
   # Emit a sound effect from the given location. `owner` is optional.

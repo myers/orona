@@ -3,6 +3,5 @@
 /js/bolo-bundle.js
 /bolo.manifest
 *.gz
-/*.json
 !/package.json
 /maps/**

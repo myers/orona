@@ -379,16 +379,17 @@ class MapView
 # with similar constructors and exposing the same attributes.
 
 class MapObject
-  constructor: (@map) -> @cell = @map.cells[@y][@x]
+  constructor: (@map, @x, @y) ->
+    @cell = @map.cells[@y][@x]
 
 class Pillbox extends MapObject
-  constructor: (map, @x, @y, @owner_idx, @armour, @speed) -> super()
+  constructor: (map, x, y, @owner_idx, @armour, @speed) -> super(map, x, y)
 
 class Base extends MapObject
-  constructor: (map, @x, @y, @owner_idx, @armour, @shells, @mines) -> super()
+  constructor: (map, x, y, @owner_idx, @armour, @shells, @mines) -> super(map, x, y)
 
 class Start extends MapObject
-  constructor: (map, @x, @y, @direction) -> super()
+  constructor: (map, x, y, @direction) -> super(map, x, y)
 
 
 #### Map class

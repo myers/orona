@@ -151,7 +151,7 @@ class BoloClientWorld extends ClientWorld
       @ws.close()
       $(@ws).unbind '.bolo'
       @ws = null
-    super()
+    super(message)
 
   # On the client, this is a no-op.
   soundEffect: (sfx, x, y, owner) ->

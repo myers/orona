@@ -45,7 +45,7 @@ extendTerrainMap()
 class WorldMapCell extends Map::CellClass
 
   constructor: (map, x, y) ->
-    super()
+    super(map, x, y)
     @life = 0
 
   isObstacle: -> @pill?.armour > 0 or @type.tankSpeed == 0
@@ -93,7 +93,7 @@ class WorldMapCell extends Map::CellClass
 
   setType: (newType, mine, retileRadius) ->
     [oldType, hadMine, oldLife] = [@type, @mine, @life]
-    super()
+    super(newType, mine, retileRadius)
     @life = switch @type.ascii
       when '.' then 5
       when '}' then 5

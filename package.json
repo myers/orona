@@ -17,16 +17,18 @@
   },
   "dependencies": {
     "coffeescript": "2.5.1",
-    "villain": "https://github.com/stephank/villain.git",
+    "villain": "https://github.com/myers/villain.git",
     "faye-websocket": "0.4",
     "connect": "2",
     "irc-js": "2.0.0-beta.5",
     "browserify": "17.0.0",
     "cake": "0.1.1",
-    "coffeeify": "3.0.1"
+    "coffeeify": "3.0.1",
+    "watchify": "4.0.0"
   },
   "scripts": {
-    "build": "browserify --debug --transform coffeeify --extension='.coffee' --standalone orona --outfile js/bolo-bundle.js ./src/client/index.coffee"
+    "build": "browserify --transform coffeeify --extension='.coffee' --standalone orona --outfile js/bolo-bundle.js ./src/client/index.coffee",
+    "watch": "watchify --transform coffeeify --extension='.coffee' --standalone orona --outfile js/bolo-bundle.js ./src/client/index.coffee"
   },
   "bin": {
     "bolo-server": "./bin/bolo-server"

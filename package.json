@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "coffeescript": "2.5.1",
-    "villain": "https://github.com/myers/villain.git",
     "faye-websocket": "0.4",
     "connect": "2",
     "irc-js": "2.0.0-beta.5",

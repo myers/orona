@@ -11,6 +11,9 @@ Apple Macintosh, and also notably rewritten for Windows and Linux by John Morris
 ## To Build
 
 ```
+git clone git@github.com:myers/orona.git
+git submodule init
+git submodule update
 npm install
 npm run build
 ```
